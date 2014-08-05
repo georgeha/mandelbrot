@@ -17,9 +17,9 @@ The parameters are the following:
 You can run this code via command list:
 	python mandelbrot_pilot.py imgX imgY xBeg xEnd yBeg yEnd
 
-You can give a test drive:
+<h2>You can give a test drive: </h2>
 
-make sure you have your virtualenv activated and everything installed:
+Make sure you have your virtualenv activated and everything installed:
 
 [Readme_Installation](https://github.com/georgeha/mandelbrot/blob/master/README.md)
 
