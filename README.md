@@ -63,6 +63,6 @@ pip install Pillow
 
 More information about the radical.pilot project can be found here:
 
-	(http://radical-cybertools.github.io/radical-pilot/index.html) 
+[Radical.Pilot](http://radical-cybertools.github.io/radical-pilot/index.html)
 
 
