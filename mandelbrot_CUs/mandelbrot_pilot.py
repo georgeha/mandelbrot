@@ -160,7 +160,7 @@ def main():
 			cudesc.environment = {"mandelx": "%d" % imgX,  "xBeg": "%d" % xBeg,
 			 "xEnd": "%d" % xEnd,  "yBeg": "%d" % yBeg,   "yEnd": "%d" % yEnd, "cy": "%f" % cy, "y" : "%d" %y }
 			cudesc.executable  = "python"
-			cudesc.arguments = ['mandel_lines.py  $mandelx $xBeg $xEnd $yBeg $yEnd $cy $y ']   
+			cudesc.arguments = ['mandel_lines.py', '$mandelx', '$xBeg', '$xEnd', '$yBeg', '$yEnd', '$cy',' $y ']   
 			cudesc.input_data = ['mandel_lines.py']
 			cudesc.output_data = output_data_list[y]   
 			mylist.append(cudesc)
