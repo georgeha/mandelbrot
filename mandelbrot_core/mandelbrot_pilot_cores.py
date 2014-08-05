@@ -92,6 +92,11 @@ def main():
 		yEnd = int(sys.argv[6])  
 
 		# end of reading  input from the user
+
+		# Add the following three lines if you want to run remote
+		#c = radical.pilot.Context('ssh')
+        #c.user_id = 'user_id'
+        #session.add_context(c)
 	
 		#DBURL = "mongodb://localhost:27017"   # this is the  default database_url if you run the  mongodb on localhost
 		# here we create a new radical session
@@ -154,7 +159,7 @@ def main():
 			cudesc.environment = {"mandelx": "%d" % imgX, "mandely": "%d" % imgY, "xBeg": "%d" % xBeg,
 			 "xEnd": "%d" % xEnd,  "yBeg": "%d" % yBeg,   "yEnd": "%d" % yEnd, "cores": "%d" % pdesc.cores, "iter": "%d" % i }
 			cudesc.executable  = "python"
-			cudesc.arguments = ['mandel_lines.py  $mandelx $mandely $xBeg $xEnd $yBeg $yEnd $cores $iter']   
+			cudesc.arguments = ['mandel_lines.py','$mandelx','$mandely','$xBeg','$xEnd','$yBeg','$yEnd','$cores','$iter']   
 			cudesc.input_data = ['mandel_lines.py']
 			cudesc.output_data = output_data_list[i-1]   
 			mylist.append(cudesc)
