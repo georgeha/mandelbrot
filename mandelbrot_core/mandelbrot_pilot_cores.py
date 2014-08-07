@@ -155,7 +155,7 @@ def main():
 		for i in range(1,pdesc.cores+1):
 			output_data_list.append('mandel_%d.gif' % i)
 			# -------- BEGIN USER DEFINED CU DESCRIPTION --------- #
-			cudesc = radical.pilot.ComputeUnitDescription()    
+			cudesc = radical.pilot.ComputeUnitDescription()  
 			cudesc.environment = {"mandelx": "%d" % imgX, "mandely": "%d" % imgY, "xBeg": "%d" % xBeg,
 			 "xEnd": "%d" % xEnd,  "yBeg": "%d" % yBeg,   "yEnd": "%d" % yEnd, "cores": "%d" % pdesc.cores, "iter": "%d" % i }
 			cudesc.executable  = "python"

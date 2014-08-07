@@ -38,8 +38,6 @@ __copyright__ = "Copyright 2012, Ole Christian Weidner"
 __license__   = "MIT"
 
 import sys
-from PIL import Image
-
 ################################################################################
 ##
 def makemandel(mandelx, mandely, xbeg, xend, ybeg, yend, cores, iterations):
@@ -53,11 +51,11 @@ def makemandel(mandelx, mandely, xbeg, xend, ybeg, yend, cores, iterations):
     # maximum iterations
     maxIt = 128 
     # the output image
-    image = Image.new("RGB", (xend-xbeg, yend-ybeg))
+   # image = Image.new("RGB", (xend-xbeg, yend-ybeg))
     ybeg2 = int(((yend*(iterations-1))/cores))
     yend2 = int(((yend*(iterations))/cores))
 
-
+    image = open('mandel_%d.txt' % iterations,'w')
     
     
     for y in range(ybeg2, yend2):
@@ -72,10 +70,18 @@ def makemandel(mandelx, mandely, xbeg, xend, ybeg, yend, cores, iterations):
             r = i % 4 * 16
             g = i % 6 * 16
             b = i % 16 * 16
-            image.putpixel((x-xbeg, y-ybeg), b * 65536 + g * 256 + r)
- 
-   
-    image.save('mandel_%d.gif' % iterations , "GIF")
+            image.write(str(x-xbeg))
+            image.write(',')
+            image.write(str(y-ybeg))
+            image.write(',')
+            color = (b * 65536 + g * 256 + r)
+            image.write(str(color))
+            image.write(',')
+
+            #image.putpixel((x-xbeg, y-ybeg), b * 65536 + g * 256 + r)
+    
+    image.close()
+    #image.save('mandel_%d.gif' % iterations , "GIF")
     
     return image
 
