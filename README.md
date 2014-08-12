@@ -65,4 +65,6 @@ More information about the radical.pilot project can be found here:
 
 [Radical.Pilot](http://radical-cybertools.github.io/radical-pilot/index.html)
 
+You can find the documentation of Mandelbrot at Read the Docs too:
+[Read the Docs](http://mandelbrot.readthedocs.org/en/latest/)
 
