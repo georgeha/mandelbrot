@@ -119,10 +119,10 @@ def main():
 
 		# this describes the requirements and the paramers
 		pdesc = radical.pilot.ComputePilotDescription()
-		pdesc.resource = "localhost" # since we are running on localhost
+		pdesc.resource = "localhost" #  we are running on localhost
 		pdesc.runtime = 10 # minutes 
 		pdesc.cores = multiprocessing.cpu_count() # we use all the cores we have
-		#pdesc.cleanup = True  # delete all the files that are created automatically when the job is done
+		pdesc.cleanup = True  # delete all the files that are created automatically and we don't need anymore  when the job is done
 
 
 		print "Submitting Compute Pilot to PilotManager"
