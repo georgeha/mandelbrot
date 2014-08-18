@@ -38,7 +38,13 @@ mandel_lines.py is the executable that creates parts of the mandelbrot fractal. 
 {"mandelx": "%d" % imgX, "mandely": "%d" % imgY, "xBeg": "%d" % xBeg, "xEnd": "%d" % xEnd,  "yBeg": "%d" % yBeg,   "yEnd": "%d" % yEnd, "cores": "%d" % pdesc.cores, "iter": "%d" % i }. Note that this block of code is in a python for loop, therefore,e.g. i corresponds to what iteration we are on. This is  a parallel code, the python uses as many cores as we define, ( now we defined cores=4) to create smaller parts of the fractal simultaneously. 
 
 
-5.1.1.2. Run the Code
+5.1.1.4 More About the Algorithm
+================================
+
+This algorithm takes the takes the parameters of the Mandelbrot fractal and decompose the image into n diferent parts, where n is the number of the cores of the system. Then it runs for every part the mandelbrot Generator Code  which is the mandel_lines.py. The mandel_lines.py creates n Images and then we compose the n images into one. The whole fractal Image. For every part of the image we create one Compute Unit.
+
+
+5.1.1.3. Run the Code
 =====================
 
 Save the file and executed::
@@ -64,6 +70,8 @@ The output should look something like this::
 	Session closed, exiting now ...
 
 When you finish the execution you may find the image in your working directory: mandelbrot_full.gif
+
+.. image:: https://github.com/georgeha/mandelbrot/blob/master/mandelbrot_core/mandelbrot_full.gif
 
 .. toctree::
    :maxdepth: 2
