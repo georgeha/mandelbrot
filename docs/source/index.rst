@@ -71,7 +71,7 @@ The output should look something like this::
 
 When you finish the execution you may find the image in your working directory: mandelbrot_full.gif
 
-.. image:: https://github.com/georgeha/mandelbrot/blob/master/mandelbrot_core/mandelbrot_full.gif
+.. image:: https://raw.githubusercontent.com/georgeha/mandelbrot/master/mandelbrot_core/mandelbrot_full.gif
 
 .. toctree::
    :maxdepth: 2
